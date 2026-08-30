@@ -4,156 +4,160 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="description" content="A furnished four-bedroom plus two-flex-room winter home in gated Blake Point on Shuswap Lake, British Columbia.">
-  <title>Blake Point House — A winter home on Shuswap Lake</title>
+  <meta name="description" content="A furnished three-level home for a quiet fall-through-spring stay in gated Blake Point, Magna Bay, on Shuswap Lake.">
+  <meta name="theme-color" content="#083848">
+  <title>Blake Point House — Fall, winter & spring in Magna Bay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="details.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="nav" data-nav>
-    <a class="brand" href="#top" aria-label="Blake Point House home">
-      <span class="brand-mark">BP</span>
-      <span>Blake Point House</span>
-    </a>
-    <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu</button>
-    <nav id="nav-links" aria-label="Primary navigation">
-      <a href="#home">The home</a>
-      <a href="#details">Details</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#location">Location</a>
-      <a class="nav-cta" href="#inquire">Inquire</a>
-    </nav>
+<!--
+THESIS: Blake Point House is a transparent quiet-season field guide, not a generic vacation-rental listing.
+OWN-WORLD: Deep lake blue, misted mineral green, ember orange, documentary photography, architectural plans and crisp editorial geometry.
+STORY: See the real house, understand its three levels and seasonal setting, decide whether the residential fit is right, then make a considered inquiry.
+FIRST VIEWPORT: A full-height exterior portrait and oversized proposition lead; the measured house plan and qualification path remain visible in the same editorial field.
+FORM: Winter Observatory, selected direction 7d9242bc; the signature interaction is a restrained Three.js seasonal topography that changes from fall through spring.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="skip-link" href="#gallery">Skip to gallery</a>
+<section class="hero-page" id="top" aria-labelledby="hero-title">
+  <aside class="hero-rail" aria-hidden="true"><span>BP</span><span class="vertical">A house · a plan · a quiet-season guide</span><span>01—31</span></aside>
+  <header class="site-header">
+    <a class="wordmark" href="#top"><span>BLAKE POINT HOUSE</span><b>MAGNA BAY · SHUSWAP LAKE</b></a>
+    <nav aria-label="Primary navigation"><a href="#gallery">Gallery</a><a href="#plan">Plan</a><a href="#seasons">Seasons</a><a href="#area">Area</a><a href="#interest">Interest</a></nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
   </header>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation"><a href="#gallery">Gallery</a><a href="#plan">Plan</a><a href="#seasons">Seasons</a><a href="#area">Area</a><a href="#interest">Interest</a></nav>
+  <div class="hero-grid">
+    <article class="hero-picture">
+      <img src="assets/photos/photo-30.webp" alt="Landscaped front approach to Blake Point House" fetchpriority="high">
+      <div class="hero-copy"><p>Furnished quiet-season tenancy · North Shuswap</p><h1 id="hero-title">STAY FOR THE<br><em>QUIET</em> SEASON.</h1><div class="hero-summary">A three-level house tour for a calm fall, winter and spring by Shuswap Lake.</div><a href="#gallery" class="hero-button">BEGIN THE HOUSE TOUR <span>↓</span></a></div>
+    </article>
+    <article class="hero-plan">
+      <div class="plan-intro"><span>01 · FROM THE MLS FILE</span><b>THREE LEVELS.<br>ONE CLEAR PLAN.</b></div>
+      <a href="#plan" class="plan-preview" aria-label="Explore the three-level floor plan"><img src="assets/floor-plan/floor-plan-preview.webp" alt="Matterport floor plan showing all three levels"></a>
+      <div class="plan-foot"><strong>2,795 FINISHED SQ. FT.</strong><span>DIMENSIONS APPROXIMATE</span></div>
+    </article>
+  </div>
+  <div class="hero-strip">
+    <article class="strip-story"><img src="assets/photos/photo-01.webp" alt="Furnished bedroom"><div><span>02 · INSIDE</span><b>SEE EVERY SUPPLIED PHOTOGRAPH.</b><p>Alternate views stay grouped by room, so the tour never overstates the house.</p></div></article>
+    <dl class="strip-facts"><div><dt>BEDROOMS</dt><dd>4 <small>+ 2 FLEX</small></dd></div><div><dt>BATHROOMS</dt><dd>4</dd></div><div><dt>PHOTOGRAPHS</dt><dd>31</dd></div><div><dt>MINIMUM STAY</dt><dd>90+ <small>DAYS</small></dd></div></dl>
+    <article class="strip-cta"><span>EXPRESSION OF INTEREST</span><b>COULD THIS FIT YOUR FALL-THROUGH-SPRING STAY?</b><a href="#interest">PRE-QUALIFY <i>→</i></a></article>
+  </div>
+</section>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/web/hero.jpg" alt="Landscaped approach to a covered entrance at Blake Point House">
-      <div class="hero-shade"></div>
-      <div class="hero-copy">
-        <p class="eyebrow light">Magna Bay · Shuswap Lake · British Columbia</p>
-        <h1 id="hero-title">Make winter feel<br>like a retreat.</h1>
-        <p class="hero-lede">A furnished four-bedroom home with two flexible rooms in gated Blake Point—quiet, spacious and ready for a slower season by the lake.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#inquire">Request availability</a>
-          <a class="text-link light" href="#gallery">Explore the home <span aria-hidden="true">↓</span></a>
-        </div>
-      </div>
-      <div class="facts" aria-label="Property highlights">
-        <div><strong>4 BR</strong><span>+ 2 flex rooms</span></div>
-        <div><strong>2,795</strong><span>Finished square feet</span></div>
-        <div><strong>90+ days</strong><span>Minimum stay</span></div>
-        <div><strong>Winter</strong><span>Seasonal availability</span></div>
-      </div>
-    </section>
+<main>
+<section class="season-manifesto section-shell" id="seasons">
+  <div class="season-atmosphere" aria-hidden="true"><canvas id="season-canvas"></canvas><div class="season-static-lines"></div></div>
+  <div class="section-number">03</div>
+  <div class="section-heading"><p>THE QUIET SEASON</p><h2>Three distinct chapters.<br>One lakeside home.</h2></div>
+  <div class="season-grid">
+    <article><span>SEP—NOV</span><h3>Fall</h3><p>Cooler trails, changing colour and the Adams River salmon season—an unhurried shoulder season that deserves more than a weekend.</p><a href="https://www.shuswaptourism.ca/discover/north-shuswap/" target="_blank" rel="noopener">Explore North Shuswap ↗</a></article>
+    <article><span>DEC—FEB</span><h3>Winter</h3><p>A quieter lake, room to work, and a furnished base for slow mornings, local walks and days at home.</p><a href="https://www.northshuswapbc.com/visit-the-north-shuswap/epic-experiences/" target="_blank" rel="noopener">See local experiences ↗</a></article>
+    <article><span>MAR—MAY</span><h3>Spring</h3><p>Waterfalls build, trails reopen and long light returns. The landscape changes before the summer crowds arrive.</p><a href="https://www.shuswaptourism.ca/shuswap-trail-network/" target="_blank" rel="noopener">Find a trail ↗</a></article>
+  </div>
+</section>
 
-    <section class="intro section" id="home">
-      <div>
-        <p class="eyebrow">A home with room to exhale</p>
-        <h2>Space for the people you want close.</h2>
-      </div>
-      <div class="intro-copy">
-        <p>Set inside Blake Point’s gated lakeside community in Magna Bay, the house pairs four bedrooms, two flexible work or sleeping rooms and four bathrooms with warm, relaxed interiors. It is designed for one household looking for a real home—not a revolving vacation rental.</p>
-        <p>We are preparing the property for a furnished winter tenancy. Exact dates, included utilities, occupancy and community-use privileges will be confirmed in the final offering.</p>
-      </div>
-    </section>
+<section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+  <div class="section-shell gallery-head"><div class="section-number">04</div><div class="section-heading"><p>THE COMPLETE PROPERTY SET</p><h2 id="gallery-title">All 31 photographs.<br>No selective tour.</h2></div><p class="gallery-note">Several photographs are alternate exposures of the same room or view. They remain here deliberately, grouped and numbered, so you can judge the house from the complete supplied set.</p></div>
+  <div class="gallery-stage" aria-live="polite">
+    <button class="stage-arrow prev" type="button" aria-label="Previous photograph">←</button>
+    <figure><img id="stage-image" src="assets/photos/photo-01.webp" alt="Primary bedroom — wide view"><figcaption><span id="stage-count">01 / 31</span><b id="stage-caption">Primary bedroom — wide view</b><button id="open-lightbox" type="button">View full screen ↗</button></figcaption></figure>
+    <button class="stage-arrow next" type="button" aria-label="Next photograph">→</button>
+  </div>
+  <div class="section-shell gallery-controls" role="group" aria-label="Filter photographs"><button class="active" data-filter="all" type="button">All 31</button><button data-filter="bedrooms" type="button">Bedrooms</button><button data-filter="living" type="button">Living</button><button data-filter="bathrooms" type="button">Bathrooms</button><button data-filter="details" type="button">Details</button><button data-filter="exterior" type="button">Exterior</button></div>
+  <div class="gallery-grid section-shell"><button class="gallery-tile" type="button" data-index="0" data-group="bedrooms" aria-label="Open photograph 1 of 31: Primary bedroom — wide view"><img src="assets/photos/thumbs/photo-01.webp" data-full="assets/photos/photo-01.webp" alt="Primary bedroom — wide view" loading="lazy" decoding="async"><span>01</span></button>
+<button class="gallery-tile" type="button" data-index="1" data-group="bedrooms" aria-label="Open photograph 2 of 31: Bedroom — front view 01"><img src="assets/photos/thumbs/photo-02.webp" data-full="assets/photos/photo-02.webp" alt="Bedroom — front view 01" loading="lazy" decoding="async"><span>02</span></button>
+<button class="gallery-tile" type="button" data-index="2" data-group="bedrooms" aria-label="Open photograph 3 of 31: Bedroom — front view 02"><img src="assets/photos/thumbs/photo-03.webp" data-full="assets/photos/photo-03.webp" alt="Bedroom — front view 02" loading="lazy" decoding="async"><span>03</span></button>
+<button class="gallery-tile" type="button" data-index="3" data-group="bedrooms" aria-label="Open photograph 4 of 31: Bedroom — front view 03"><img src="assets/photos/thumbs/photo-04.webp" data-full="assets/photos/photo-04.webp" alt="Bedroom — front view 03" loading="lazy" decoding="async"><span>04</span></button>
+<button class="gallery-tile" type="button" data-index="4" data-group="bedrooms" aria-label="Open photograph 5 of 31: Bedroom — front view 04"><img src="assets/photos/thumbs/photo-05.webp" data-full="assets/photos/photo-05.webp" alt="Bedroom — front view 04" loading="lazy" decoding="async"><span>05</span></button>
+<button class="gallery-tile" type="button" data-index="5" data-group="bedrooms" aria-label="Open photograph 6 of 31: Bedroom — front view 05"><img src="assets/photos/thumbs/photo-06.webp" data-full="assets/photos/photo-06.webp" alt="Bedroom — front view 05" loading="lazy" decoding="async"><span>06</span></button>
+<button class="gallery-tile" type="button" data-index="6" data-group="bedrooms" aria-label="Open photograph 7 of 31: Bedroom — front view 06"><img src="assets/photos/thumbs/photo-07.webp" data-full="assets/photos/photo-07.webp" alt="Bedroom — front view 06" loading="lazy" decoding="async"><span>07</span></button>
+<button class="gallery-tile" type="button" data-index="7" data-group="bedrooms" aria-label="Open photograph 8 of 31: Bedroom suite — room overview"><img src="assets/photos/thumbs/photo-08.webp" data-full="assets/photos/photo-08.webp" alt="Bedroom suite — room overview" loading="lazy" decoding="async"><span>08</span></button>
+<button class="gallery-tile" type="button" data-index="8" data-group="living" aria-label="Open photograph 9 of 31: TV lounge — view 01"><img src="assets/photos/thumbs/photo-09.webp" data-full="assets/photos/photo-09.webp" alt="TV lounge — view 01" loading="lazy" decoding="async"><span>09</span></button>
+<button class="gallery-tile" type="button" data-index="9" data-group="living" aria-label="Open photograph 10 of 31: TV lounge — view 02"><img src="assets/photos/thumbs/photo-10.webp" data-full="assets/photos/photo-10.webp" alt="TV lounge — view 02" loading="lazy" decoding="async"><span>10</span></button>
+<button class="gallery-tile" type="button" data-index="10" data-group="living" aria-label="Open photograph 11 of 31: TV lounge — view 03"><img src="assets/photos/thumbs/photo-11.webp" data-full="assets/photos/photo-11.webp" alt="TV lounge — view 03" loading="lazy" decoding="async"><span>11</span></button>
+<button class="gallery-tile" type="button" data-index="11" data-group="details" aria-label="Open photograph 12 of 31: Interior console and artwork"><img src="assets/photos/thumbs/photo-12.webp" data-full="assets/photos/photo-12.webp" alt="Interior console and artwork" loading="lazy" decoding="async"><span>12</span></button>
+<button class="gallery-tile" type="button" data-index="12" data-group="bedrooms" aria-label="Open photograph 13 of 31: Second bedroom — view 01"><img src="assets/photos/thumbs/photo-13.webp" data-full="assets/photos/photo-13.webp" alt="Second bedroom — view 01" loading="lazy" decoding="async"><span>13</span></button>
+<button class="gallery-tile" type="button" data-index="13" data-group="bedrooms" aria-label="Open photograph 14 of 31: Second bedroom — view 02"><img src="assets/photos/thumbs/photo-14.webp" data-full="assets/photos/photo-14.webp" alt="Second bedroom — view 02" loading="lazy" decoding="async"><span>14</span></button>
+<button class="gallery-tile" type="button" data-index="14" data-group="bedrooms" aria-label="Open photograph 15 of 31: Second bedroom — dresser and workspace"><img src="assets/photos/thumbs/photo-15.webp" data-full="assets/photos/photo-15.webp" alt="Second bedroom — dresser and workspace" loading="lazy" decoding="async"><span>15</span></button>
+<button class="gallery-tile" type="button" data-index="15" data-group="bedrooms" aria-label="Open photograph 16 of 31: Second bedroom — view 03"><img src="assets/photos/thumbs/photo-16.webp" data-full="assets/photos/photo-16.webp" alt="Second bedroom — view 03" loading="lazy" decoding="async"><span>16</span></button>
+<button class="gallery-tile" type="button" data-index="16" data-group="bedrooms" aria-label="Open photograph 17 of 31: Second bedroom — view 04"><img src="assets/photos/thumbs/photo-17.webp" data-full="assets/photos/photo-17.webp" alt="Second bedroom — view 04" loading="lazy" decoding="async"><span>17</span></button>
+<button class="gallery-tile" type="button" data-index="17" data-group="details" aria-label="Open photograph 18 of 31: Interior detail — view 02"><img src="assets/photos/thumbs/photo-18.webp" data-full="assets/photos/photo-18.webp" alt="Interior detail — view 02" loading="lazy" decoding="async"><span>18</span></button>
+<button class="gallery-tile" type="button" data-index="18" data-group="details" aria-label="Open photograph 19 of 31: Interior detail — view 03"><img src="assets/photos/thumbs/photo-19.webp" data-full="assets/photos/photo-19.webp" alt="Interior detail — view 03" loading="lazy" decoding="async"><span>19</span></button>
+<button class="gallery-tile" type="button" data-index="19" data-group="bathrooms" aria-label="Open photograph 20 of 31: Bathroom — vanity and shower"><img src="assets/photos/thumbs/photo-20.webp" data-full="assets/photos/photo-20.webp" alt="Bathroom — vanity and shower" loading="lazy" decoding="async"><span>20</span></button>
+<button class="gallery-tile" type="button" data-index="20" data-group="bathrooms" aria-label="Open photograph 21 of 31: Bathroom — shower detail"><img src="assets/photos/thumbs/photo-21.webp" data-full="assets/photos/photo-21.webp" alt="Bathroom — shower detail" loading="lazy" decoding="async"><span>21</span></button>
+<button class="gallery-tile" type="button" data-index="21" data-group="exterior" aria-label="Open photograph 22 of 31: Front approach — view 01"><img src="assets/photos/thumbs/photo-22.webp" data-full="assets/photos/photo-22.webp" alt="Front approach — view 01" loading="lazy" decoding="async"><span>22</span></button>
+<button class="gallery-tile" type="button" data-index="22" data-group="exterior" aria-label="Open photograph 23 of 31: Front approach — view 02"><img src="assets/photos/thumbs/photo-23.webp" data-full="assets/photos/photo-23.webp" alt="Front approach — view 02" loading="lazy" decoding="async"><span>23</span></button>
+<button class="gallery-tile" type="button" data-index="23" data-group="exterior" aria-label="Open photograph 24 of 31: Covered porch — view 01"><img src="assets/photos/thumbs/photo-24.webp" data-full="assets/photos/photo-24.webp" alt="Covered porch — view 01" loading="lazy" decoding="async"><span>24</span></button>
+<button class="gallery-tile" type="button" data-index="24" data-group="exterior" aria-label="Open photograph 25 of 31: Covered porch — view 02"><img src="assets/photos/thumbs/photo-25.webp" data-full="assets/photos/photo-25.webp" alt="Covered porch — view 02" loading="lazy" decoding="async"><span>25</span></button>
+<button class="gallery-tile" type="button" data-index="25" data-group="exterior" aria-label="Open photograph 26 of 31: Covered porch — view 03"><img src="assets/photos/thumbs/photo-26.webp" data-full="assets/photos/photo-26.webp" alt="Covered porch — view 03" loading="lazy" decoding="async"><span>26</span></button>
+<button class="gallery-tile" type="button" data-index="26" data-group="exterior" aria-label="Open photograph 27 of 31: Exterior angle — view 01"><img src="assets/photos/thumbs/photo-27.webp" data-full="assets/photos/photo-27.webp" alt="Exterior angle — view 01" loading="lazy" decoding="async"><span>27</span></button>
+<button class="gallery-tile" type="button" data-index="27" data-group="exterior" aria-label="Open photograph 28 of 31: Exterior angle — view 02"><img src="assets/photos/thumbs/photo-28.webp" data-full="assets/photos/photo-28.webp" alt="Exterior angle — view 02" loading="lazy" decoding="async"><span>28</span></button>
+<button class="gallery-tile" type="button" data-index="28" data-group="exterior" aria-label="Open photograph 29 of 31: House and landscaped yard"><img src="assets/photos/thumbs/photo-29.webp" data-full="assets/photos/photo-29.webp" alt="House and landscaped yard" loading="lazy" decoding="async"><span>29</span></button>
+<button class="gallery-tile" type="button" data-index="29" data-group="exterior" aria-label="Open photograph 30 of 31: Centered front approach — view 01"><img src="assets/photos/thumbs/photo-30.webp" data-full="assets/photos/photo-30.webp" alt="Centered front approach — view 01" loading="lazy" decoding="async"><span>30</span></button>
+<button class="gallery-tile" type="button" data-index="30" data-group="exterior" aria-label="Open photograph 31 of 31: Centered front approach — view 02"><img src="assets/photos/thumbs/photo-31.webp" data-full="assets/photos/photo-31.webp" alt="Centered front approach — view 02" loading="lazy" decoding="async"><span>31</span></button></div>
+</section>
 
-    <section class="feature-grid section" aria-label="Home highlights">
-      <article class="feature-image tall">
-        <img src="assets/web/bedroom-one.jpg" alt="Rustic wood bed with neutral bedding and nautical artwork">
-      </article>
-      <article class="feature-copy rust">
-        <p class="eyebrow light">Rest well</p>
-        <h3>Comfort without the fuss.</h3>
-        <p>Calm finishes, natural wood and flexible sleeping spaces make it easy to settle in for more than a weekend.</p>
-      </article>
-      <article class="feature-copy cream">
-        <p class="eyebrow">Settle in</p>
-        <h3>A winter base, not a hotel room.</h3>
-        <p>A quiet setting for remote work, family time and unhurried days around the Shuswap.</p>
-      </article>
-      <article class="feature-image">
-        <img src="assets/web/lounge.jpg" alt="Soft neutral sofa facing a wall-mounted television">
-      </article>
-    </section>
+<section class="plan-section section-shell" id="plan" aria-labelledby="plan-title">
+  <div class="section-number">05</div>
+  <div class="section-heading"><p>ORIGINAL MATTERPORT MLS PLAN</p><h2 id="plan-title">Understand the house<br>before you visit.</h2></div>
+  <div class="plan-explorer">
+    <div class="plan-tabs" role="tablist" aria-label="Floor levels"><button class="active" role="tab" aria-selected="true" data-level="1" type="button"><span>01</span>Floor 1 <b>1,067 sq. ft.</b></button><button role="tab" aria-selected="false" data-level="2" type="button"><span>02</span>Floor 2 <b>1,183 sq. ft.</b></button><button role="tab" aria-selected="false" data-level="3" type="button"><span>03</span>Floor 3 <b>545 sq. ft.</b></button></div>
+    <figure class="plan-canvas"><button class="plan-zoom" type="button">Open full plan ↗</button><img id="level-image" src="assets/floor-plan/floor-1.webp" alt="Floor 1 plan"><figcaption><strong id="level-name">Floor 1 · 1,067 finished sq. ft.</strong><span id="level-spaces">Bedrooms · living room · office · foyer · two baths · patio · balcony</span></figcaption></figure>
+    <aside class="plan-notes"><h3>Area summary</h3><dl><div><dt>Finished interior</dt><dd>2,795 sq. ft.</dd></div><div><dt>Garage</dt><dd>635 sq. ft.</dd></div><div><dt>Deck</dt><dd>459 sq. ft.</dd></div><div><dt>Patio</dt><dd>332 sq. ft.</dd></div><div><dt>Balcony</dt><dd>45 sq. ft.</dd></div></dl><p>Sizes and dimensions are approximate; actual may vary. Floor-plan labels and areas are reproduced from the purchase MLS file.</p><a href="assets/floor-plan.pdf" download>Download original floor plan (PDF) ↓</a></aside>
+  </div>
+</section>
 
-    <section class="details section" id="details" aria-labelledby="details-title">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">The practical details</p>
-          <h2 id="details-title">Furnished for a full season.</h2>
-        </div>
-        <p>A single continuous residential tenancy of 90 days or longer. Final dates, rent, utilities, approved occupants, pet terms and community privileges are confirmed before an application proceeds.</p>
-      </div>
-      <div class="detail-cards">
-        <article><span>01</span><h3>Room to live</h3><p>Four bedrooms, two flex rooms, four bathrooms, a finished lower level and approximately 2,795 finished square feet.</p></article>
-        <article><span>02</span><h3>Winter-ready</h3><p>Furnished interiors, electric and propane heating systems, a double garage and space suitable for ordinary remote work.</p></article>
-        <article><span>03</span><h3>Community-minded</h3><p>Gated Blake Point has quiet hours and clear rules for pets, parking, garbage, septic care and common property.</p></article>
-      </div>
-      <p class="price-line"><strong>Provisional launch ask: $3,500/month</strong><span>Furnished · internet included · hydro and propane extra</span></p>
-      <p class="detail-note">Boat slip, dock berth and specific amenity access are not promised by this preview and will be confirmed separately in writing if available.</p>
-    </section>
+<section class="area-section" id="area" aria-labelledby="area-title">
+  <div class="section-shell area-head"><div class="section-number">06</div><div class="section-heading"><p>THE NORTH SHUSWAP AROUND YOU</p><h2 id="area-title">Daily needs nearby.<br>Trails in every direction.</h2></div><p>The map uses an approximate Blake Point area marker rather than the house’s precise location. Select a place to locate it; follow the source link for current conditions and seasonal access.</p></div>
+  <div class="area-layout section-shell">
+    <div id="area-map" aria-label="Interactive map of Magna Bay and North Shuswap attractions"><noscript><p>Enable JavaScript for the interactive map.</p></noscript></div>
+    <div class="place-list">
+      <button class="place active" data-place="home" type="button"><span>HOME BASE</span><b>Blake Point · approximate</b><small>Magna Bay · exact address shared with qualified applicants</small></button>
+      <button class="place" data-place="ross" type="button"><span>EVERYDAY</span><b>Ross Creek Country Store</b><small>Groceries · fuel · propane · Wi-Fi · laundry</small></button>
+      <button class="place" data-place="health" type="button"><span>SERVICE</span><b>North Shuswap Health Centre</b><small>Appointment-based primary and allied care</small></button>
+      <button class="place" data-place="park" type="button"><span>PARK</span><b>Shuswap Lake Provincial Park</b><small>Beach · nature trail · year-round boat-launch access via Ashe Road</small></button>
+      <button class="place" data-place="evelyn" type="button"><span>TRAIL</span><b>Evelyn Falls</b><small>3 km round trip · conditions vary by season</small></button>
+      <button class="place" data-place="tsutswecw" type="button"><span>FALL</span><b>Tsútswecw Provincial Park</b><small>Adams River trails · salmon viewing in season</small></button>
+    </div>
+  </div>
+  <div class="area-sources section-shell"><a href="https://www.northshuswapbc.com/membership-directory/category/51/Service-Stations/" target="_blank" rel="noopener">Store details ↗</a><a href="https://www.northshuswaphealthcentre.ca/" target="_blank" rel="noopener">Health Centre ↗</a><a href="https://bcparks.ca/shuswap-lake-park/" target="_blank" rel="noopener">BC Parks conditions ↗</a><a href="https://shuswaptrails.com/trails/" target="_blank" rel="noopener">Trail status ↗</a><a href="https://www.shuswaptourism.ca/discover/north-shuswap/" target="_blank" rel="noopener">Shuswap Tourism ↗</a></div>
+</section>
 
-    <section class="gallery section" id="gallery">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Inside and out</p>
-          <h2>A first look.</h2>
-        </div>
-        <p>Selected photographs from the house. More rooms and a complete inventory will be added before applications open.</p>
-      </div>
-      <div class="mosaic">
-        <button class="photo wide" data-photo="assets/web/exterior-angle.jpg" aria-label="Open exterior angle photo"><img src="assets/web/exterior-angle.jpg" alt="Angled exterior view with landscaping and covered entrance"></button>
-        <button class="photo" data-photo="assets/web/porch.jpg" aria-label="Open covered entrance photo"><img src="assets/web/porch.jpg" alt="Covered entrance with hanging plants and wicker chairs"></button>
-        <button class="photo" data-photo="assets/web/room-overview.jpg" aria-label="Open room overview photo"><img src="assets/web/room-overview.jpg" alt="Wide view of a sleeping and sitting area"></button>
-        <button class="photo" data-photo="assets/web/bedroom-two.jpg" aria-label="Open second bedroom photo"><img src="assets/web/bedroom-two.jpg" alt="Wood bed with white bedding and blue bedside lamps"></button>
-        <button class="photo" data-photo="assets/web/console.jpg" aria-label="Open interior detail photo"><img src="assets/web/console.jpg" alt="Wood console with blue lamps, greenery and boat artwork"></button>
-        <button class="photo full" data-photo="assets/web/bathroom.jpg" aria-label="Open bathroom photo"><img src="assets/web/bathroom.jpg" alt="Bright bathroom with vanity, toilet and glass shower"></button>
-      </div>
-    </section>
+<section class="fit-section section-shell" id="fit">
+  <div class="section-number">07</div>
+  <div class="section-heading"><p>A GOOD RESIDENTIAL FIT</p><h2>A home for living,<br>not an operating base.</h2></div>
+  <div class="fit-grid"><article><h3>What fits</h3><ul><li>One quiet residential tenancy of 90 days or longer</li><li>Ordinary remote work and day-to-day family life</li><li>Approved occupants, vehicles and pets confirmed in writing</li><li>Respect for strata parking, quiet hours and common property</li></ul></article><article><h3>What does not</h3><ul><li>Parties, events or group-recreation staging</li><li>Commercial or crew accommodation</li><li>Recreational-vehicle repair or trailering operations</li><li>Fuel storage or disruptive property uses</li></ul></article><article><h3>Before applying</h3><ul><li>Internet is included; verify performance for job-specific needs</li><li>Hydro and propane are extra</li><li>Dock, slip and amenity access are not promised unless written into the tenancy</li><li>Final terms use the BC RTB-1 plus a reviewed addendum</li></ul></article></div>
+</section>
 
-    <section class="location section" id="location">
-      <div class="location-card">
-        <p class="eyebrow light">North Shuswap</p>
-        <h2>Lake country,<br>in its quiet season.</h2>
-        <p>Blake Point sits in Magna Bay on the north side of Shuswap Lake. Winter brings a calmer pace, mountain air and a genuine sense of escape.</p>
-        <a class="text-link light" href="https://www.google.com/maps/search/?api=1&query=Blake+Point+Magna+Bay+BC" target="_blank" rel="noopener">View the area on Google Maps <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="location-art" aria-hidden="true">
-        <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="pin">BP</div>
-      </div>
-    </section>
+<section class="interest-section" id="interest" aria-labelledby="interest-title">
+  <div class="interest-copy"><p>08 · EXPRESSION OF INTEREST</p><h2 id="interest-title">Could Blake Point<br>fit your quiet season?</h2><p>The current working range is $3,000–$3,200 per month. Start with a short fit check; it prepares an email in your own mail app, and nothing is stored by this preview site.</p><p class="price-inclusions">Furnished · internet included · hydro and propane extra · final deposit, pet and utility terms confirmed before agreement.</p><div class="interest-links"><a href="assets/blake-point-house-brochure.pdf" download>Download the brochure ↓</a><a href="mailto:brandon@thedrewlos.com?subject=Blake%20Point%20House%20question">Email Brandon directly ↗</a><span>Call/text details are shared after the initial fit check.</span></div></div>
+  <form class="interest-form" data-interest-form>
+    <label><span>Full name *</span><input name="name" autocomplete="name" required></label>
+    <label><span>Email *</span><input name="email" type="email" autocomplete="email" required></label>
+    <label><span>Phone · optional</span><input name="phone" type="tel" autocomplete="tel"></label>
+    <label><span>Preferred dates *</span><input name="dates" placeholder="For example: Oct 15 to Apr 30" required></label>
+    <label class="wide"><span>Who would occupy the home, and what would the home be used for? *</span><textarea name="use" rows="3" required></textarea></label>
+    <label><span>Pets and vehicles · optional</span><input name="petsVehicles" placeholder="Brief details"></label>
+    <label><span>Target monthly budget · optional</span><input name="budget" placeholder="Working range: $3,000–$3,200"></label>
+    <label class="wide check"><input name="fit" type="checkbox" required><span>I’m seeking quiet residential use—not parties, events, commercial/crew accommodation, RV repair, fuel storage or a trailering operation.</span></label>
+    <button type="submit">Prepare my inquiry email <span>→</span></button>
+    <button class="copy-inquiry" type="button">Copy inquiry instead <span>⧉</span></button>
+    <p class="form-status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
 
-    <section class="inquire section" id="inquire">
-      <div>
-        <p class="eyebrow">Winter availability</p>
-        <h2>Tell us what you need.</h2>
-        <p>We are collecting early interest for a furnished 90-day-or-longer winter tenancy at a provisional $3,500 monthly ask, with internet included and hydro and propane extra. A strong fit matters more than filling the calendar quickly.</p>
-      </div>
-      <form class="interest-form" data-form>
-        <label>Full name<input name="name" autocomplete="name" required></label>
-        <label>Email<input name="email" type="email" autocomplete="email" required></label>
-        <label>Preferred dates<input name="dates" placeholder="For example: Nov 1 to Mar 31" required></label>
-        <label>Who would live in the home?<textarea name="household" rows="3" placeholder="Adults, children and any pets"></textarea></label>
-        <label>Anything else we should know?<textarea name="notes" rows="4" placeholder="Work, references, accessibility or other needs"></textarea></label>
-        <label>Target monthly budget<input name="budget" placeholder="For example: $3,500"></label>
-        <button class="button dark" type="submit">Prepare inquiry email</button>
-        <p class="form-note">This staging form opens your email app and does not store information. A secure application form will replace it before launch.</p>
-        <p class="form-note">If your email app does not open, write to <a href="mailto:brandon@thedrewlos.com">brandon@thedrewlos.com</a>.</p>
-      </form>
-    </section>
-  </main>
+<footer><div><b>BP</b><span>BLAKE POINT HOUSE<br><small>MAGNA BAY · SHUSWAP LAKE</small></span></div><p>Private staging preview · furnished 90-day-or-longer tenancy · fall, winter and spring</p><a href="#top">Back to top ↑</a></footer>
 
-  <footer>
-    <div><span class="brand-mark">BP</span><strong>Blake Point House</strong></div>
-    <p>Furnished winter home · Magna Bay, British Columbia</p>
-    <p class="staging">Private staging preview · Not yet a public rental offer</p>
-  </footer>
-
-  <dialog class="lightbox" data-lightbox>
-    <button class="close" data-close aria-label="Close image">×</button>
-    <img alt="Expanded property photograph">
-  </dialog>
-  <script src="script.js"></script>
+<dialog class="lightbox" aria-label="Property photograph viewer"><button class="lightbox-close" type="button" aria-label="Close viewer">×</button><button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous photograph">←</button><figure><img src="assets/photos/photo-01.webp" alt="Primary bedroom — wide view"><figcaption><span></span><b></b></figcaption></figure><button class="lightbox-arrow lightbox-next" type="button" aria-label="Next photograph">→</button></dialog>
+<dialog class="plan-dialog" aria-label="Full floor plan"><button class="plan-close" type="button" aria-label="Close floor plan">×</button><img src="assets/floor-plan/floor-plan.webp" alt="Complete three-level Matterport floor plan"><a href="assets/floor-plan.pdf" download>Download original PDF ↓</a></dialog>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+<script type="module" src="season-visual.js"></script>
 </body>
 </html>

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-29T00:00:00-07:00",
+  "title": "Design System: Blake Point House",
+  "extensions": {
+    "colorMeta": {
+      "lake": { "role": "neutral", "displayName": "Deep Lake", "canonical": "#083848", "tonalRamp": ["#041c24", "#062a38", "#083848", "#0c5064", "#1a7089", "#4b93a5", "#8fb9c4", "#d3e6ea"] },
+      "lake-deep": { "role": "neutral", "displayName": "Lake Deep", "canonical": "#062a38", "tonalRamp": ["#02121a", "#041c24", "#062a38", "#0a3a4c", "#155066", "#3d7284", "#7ea3ae", "#c8dee2"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#092939", "tonalRamp": ["#03141c", "#051f2b", "#092939", "#0f3a4d", "#1c5064", "#487081", "#8aabb5", "#cfdfe4"] },
+      "paper": { "role": "neutral", "displayName": "Misted Paper", "canonical": "#eef5f0", "tonalRamp": ["#5c6d63", "#8ea296", "#bccdc4", "#d8e5df", "#eef5f0", "#f3f8f5", "#f8fbf9", "#fdfefd"] },
+      "paper-2": { "role": "neutral", "displayName": "Paper Secondary", "canonical": "#e1eeeb", "tonalRamp": ["#4f6663", "#7f9995", "#aec3bf", "#cbdcd9", "#e1eeeb", "#eaf3f1", "#f2f8f6", "#fafcfb"] },
+      "white": { "role": "neutral", "displayName": "Editorial White", "canonical": "#f7fbf8", "tonalRamp": ["#7a827e", "#a6ada9", "#c9d0cc", "#e2e8e5", "#f7fbf8", "#f9fcfa", "#fbfdfc", "#fdfefd"] },
+      "orange": { "role": "primary", "displayName": "Ember Orange", "canonical": "#e85838", "tonalRamp": ["#3d130a", "#6b2113", "#9c2f1b", "#c83d22", "#e85838", "#ef7f61", "#f4a692", "#fad3c8"] },
+      "orange-deep": { "role": "primary", "displayName": "Ember Deep", "canonical": "#c83d22", "tonalRamp": ["#340e07", "#5c1a10", "#8a2718", "#c83d22", "#dd6448", "#e88a75", "#f1b1a2", "#f9d8d0"] },
+      "orange-ink": { "role": "primary", "displayName": "Ember Ink", "canonical": "#b6351d", "tonalRamp": ["#2f0d06", "#54180d", "#812718", "#b6351d", "#d15b41", "#e08471", "#eeacA0", "#f8d5cd"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgba(8,56,72,.18)", "tonalRamp": ["rgba(8,56,72,.06)", "rgba(8,56,72,.12)", "rgba(8,56,72,.18)", "rgba(8,56,72,.28)", "rgba(8,56,72,.4)", "rgba(8,56,72,.55)", "rgba(8,56,72,.7)", "rgba(8,56,72,.85)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display / Headline", "purpose": "Hero H1 and section H2 statements, Archivo Black, tight negative tracking." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy across seasons, fit, and plan-notes blocks." },
+      "label": { "displayName": "Label", "purpose": "Uppercase nav, buttons, eyebrows, and form labels; 700-weight, wide tracking." }
+    },
+    "shadows": [
+      { "name": "map-popup", "value": "0 10px 30px rgba(6,42,56,.25)", "purpose": "Leaflet popup lifted over variable map imagery only." },
+      { "name": "map-marker", "value": "0 4px 14px rgba(6,42,56,.28)", "purpose": "Custom square map pin lifted over variable map imagery only." }
+    ],
+    "motion": [
+      { "name": "ease-season-fade", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Canvas opacity fade-in when the Three.js seasonal field becomes ready." },
+      { "name": "duration-image-swap", "value": "0.18s ease", "purpose": "Gallery stage and plan-canvas image opacity crossfade on navigation." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1100px" },
+      { "name": "mobile", "value": "760px" },
+      { "name": "three-js-gate", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Inquiry Submit)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled square submit button on the dark inquiry-form panel; label left, glyph-style affordance right.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">SEND EXPRESSION OF INTEREST <span>→</span></button>",
+      "css": ".ds-btn-primary { border: 1px solid #ffffff; background: #ffffff; color: #c83d22; padding: 17px 20px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-radius: 0; cursor: pointer; font-family: 'Manrope', Arial, sans-serif; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: #f2ede8; outline: 3px solid #e85838; outline-offset: 4px; }"
+    },
+    {
+      "name": "Ghost Button (Hero CTA)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined transparent button over photography; used as the hero primary CTA.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#gallery\">BEGIN THE HOUSE TOUR <span>↓</span></a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; text-decoration: none; border: 1px solid rgba(255,255,255,.55); padding: 15px 18px; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 0; font-family: 'Manrope', Arial, sans-serif; } .ds-btn-ghost span { margin-left: 25px; color: #e85838; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { border-color: #e85838; outline: 3px solid #e85838; outline-offset: 4px; }"
+    },
+    {
+      "name": "Underline Text Input",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Borderless field on the dark inquiry form; single bottom-border underline, brightens on focus.",
+      "html": "<label class=\"ds-field\"><span>Full name</span><input type=\"text\" placeholder=\"Jordan Blake\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 9px; font-family: 'Manrope', Arial, sans-serif; } .ds-field span { font-size: 9px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: #ffffff; } .ds-field input { width: 100%; border: 0; border-bottom: 1px solid rgba(255,255,255,.6); background: transparent; color: #ffffff; padding: 10px 0 13px; border-radius: 0; outline: none; font-size: 14px; } .ds-field input::placeholder { color: #ffffff; opacity: 1; } .ds-field input:focus-visible { border-bottom-color: #ffffff; outline: none; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Flat uppercase nav links; the final entry (conversion path) is permanently colored ember orange.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#gallery\">Gallery</a><a href=\"#plan\">Plan</a><a href=\"#seasons\">Seasons</a><a href=\"#area\">Area</a><a class=\"ds-nav-active\" href=\"#interest\">Interest</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 30px; font-family: 'Manrope', Arial, sans-serif; } .ds-nav a { text-decoration: none; text-transform: uppercase; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: #092939; } .ds-nav a:hover, .ds-nav a:focus-visible { color: #e85838; outline: none; } .ds-nav-active { color: #e85838 !important; }"
+    },
+    {
+      "name": "Filter Chip / Tab",
+      "kind": "chip",
+      "refersTo": "gallery-filter",
+      "description": "Square uppercase filter control used for the gallery filter row and the plan-explorer level tabs; active state fills ember orange.",
+      "html": "<div class=\"ds-chip-row\" role=\"group\" aria-label=\"Filter photographs\"><button class=\"ds-chip active\" type=\"button\">All 31</button><button class=\"ds-chip\" type=\"button\">Bedrooms</button><button class=\"ds-chip\" type=\"button\">Living</button></div>",
+      "css": ".ds-chip-row { display: flex; overflow-x: auto; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); } .ds-chip { border: 0; border-right: 1px solid rgba(255,255,255,.2); background: transparent; color: #b9c8ca; padding: 16px 21px; text-transform: uppercase; font-size: 9px; letter-spacing: 0.13em; font-weight: 700; cursor: pointer; white-space: nowrap; font-family: 'Manrope', Arial, sans-serif; border-radius: 0; } .ds-chip.active, .ds-chip:hover, .ds-chip:focus-visible { background: #e85838; color: #ffffff; outline: none; }"
+    },
+    {
+      "name": "Fact Card (Strip Facts)",
+      "kind": "card",
+      "refersTo": "strip-facts",
+      "description": "Square tonal stat tile used in the hero strip to show a house fact (bedrooms, bathrooms, etc.).",
+      "html": "<div class=\"ds-card-fact\"><dt>BEDROOMS</dt><dd>4 <small>+ 2 FLEX</small></dd></div>",
+      "css": ".ds-card-fact { padding: 23px 25px; background: #e1eeeb; border-right: 1px solid rgba(8,56,72,.18); border-bottom: 1px solid rgba(8,56,72,.18); display: flex; flex-direction: column; justify-content: space-between; font-family: 'Manrope', Arial, sans-serif; border-radius: 0; } .ds-card-fact dt { font-size: 8px; letter-spacing: 0.14em; font-weight: 700; color: #49626b; text-transform: uppercase; margin: 0; } .ds-card-fact dd { margin: 0; font-family: 'Archivo Black', Impact, sans-serif; font-weight: 400; font-size: clamp(25px,2.4vw,38px); line-height: 1; } .ds-card-fact small { font-family: 'Manrope', Arial, sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.1em; }"
+    },
+    {
+      "name": "Map List Item (Place)",
+      "kind": "custom",
+      "refersTo": "place-list-item",
+      "description": "Selectable square list row pairing with the map; active state fills deep lake blue.",
+      "html": "<button class=\"ds-place active\" type=\"button\"><span>CAFE</span><b>Magna Bay General Store</b><small>4 minute drive · groceries and essentials</small></button>",
+      "css": ".ds-place { width: 100%; min-height: 112px; text-align: left; border: 0; border-bottom: 1px solid rgba(8,56,72,.18); padding: 18px 23px; background: #eef5f0; color: #092939; display: flex; flex-direction: column; cursor: pointer; border-radius: 0; font-family: 'Manrope', Arial, sans-serif; } .ds-place span { font-size: 8px; letter-spacing: 0.14em; color: #b6351d; font-weight: 700; text-transform: uppercase; } .ds-place b { font-family: 'Archivo Black', Impact, sans-serif; font-weight: 400; font-size: 17px; line-height: 1.15; margin: 8px 0; } .ds-place small { font-size: 10px; line-height: 1.45; color: #4d666e; } .ds-place.active, .ds-place:hover, .ds-place:focus-visible { background: #083848; color: #ffffff; outline: none; } .ds-place.active small { color: #bfd0d2; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Winter Observatory",
+    "overview": "Blake Point House presents itself as a field guide, not a listing: a documentary-photography survey of a real furnished house, framed by an MLS floor plan and read against the fall-through-spring calendar of the North Shuswap. The palette is drawn from the lake itself — a deep, almost-black lake blue as the dominant dark, a misted mineral-green paper as the dominant light — with a single ember-orange accent reserved for calls to action, numbering, and seasonal signal. Layout is hard-edged and editorial: square blocks, ruled dividers, numbered sections (01—31), and a strict two-font system (a blunt display slab over a clean humanist body) rather than soft, resort-brochure styling. The signature technical gesture is a restrained Three.js topographic field — thin contour lines and drifting ember particles behind the seasons section — that shifts hue from ember through frost to spring green as the visitor scrolls, gated off on small screens, reduced-motion, and save-data connections so the experience degrades to static ruled lines rather than breaking.\n\nThis is a Persuade-mode surface built to qualify, not hype: it must feel more visual, dynamic, and premium than a generic vacation-rental page while staying candid, calm, and residential. It explicitly rejects resort marketing, rounded/soft touches, and drop-shadow \"app\" chrome in favor of flat tonal layering and hard-edged blocks.",
+    "keyCharacteristics": [
+      "Two-tone dominant palette (deep lake blue / misted mineral paper) with a single ember-orange accent used sparingly for action and orientation.",
+      "Flat, tonal, hard-edged blocks — no rounded corners, no drop shadows for elevation.",
+      "Archivo Black display type set tight and negative-tracked; Manrope for everything readable.",
+      "Documentary photography and Matterport-derived floor-plan geometry as the visual evidence base.",
+      "A restrained, seasonally color-shifting Three.js topographic field as the one signature motion moment, hard-gated by viewport size, reduced motion, and save-data."
+    ],
+    "rules": [
+      { "name": "The One-Accent Rule", "body": "Ember orange is the only saturated hue in the system; every other surface is lake-blue or mineral-paper. If a new element needs emphasis, it earns orange — nothing else.", "section": "colors" },
+      { "name": "The Uppercase Label Rule", "body": "Every functional label — nav, eyebrows, buttons, filters, form field labels — is 700-weight, 8–10px, uppercase, with .1em+ letter-spacing. Never mix in sentence-case labels next to this system.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces sit at the same visual depth at rest; separation comes from color contrast and hairline rules, never a shadow. Shadows are reserved for the one case where content sits over unpredictable imagery (the map).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every corner square (0px radius) — buttons, cards, images, form fields, even third-party map markers.",
+      "Do reserve ember orange (#e85838) for action, orientation, and seasonal signal only; every other surface stays lake-blue or mineral-paper.",
+      "Do set uppercase functional labels (nav, buttons, eyebrows, form labels) at 700-weight, 8–10px, with ≥.1em letter-spacing.",
+      "Do gate any new motion-heavy feature behind the same triad this system already uses: prefers-reduced-motion, a ≤900px viewport check, and navigator.connection.saveData.",
+      "Do convey depth with tonal layering and hairline rules, not shadows, except where content sits over unpredictable photography (e.g. the map)."
+    ],
+    "donts": [
+      "Don't add box-shadow elevation to cards, buttons, or panels — this system is flat by rule.",
+      "Don't introduce a second saturated accent color; the palette is deliberately two-tone-plus-one-accent.",
+      "Don't round any corners, including on embedded third-party widgets (Leaflet markers/popups already get overridden to square).",
+      "Don't let the Three.js seasonal field run unconditionally — it must stay lazy-loaded and gated, never a blocking or always-on animation."
+    ]
+  }
+}

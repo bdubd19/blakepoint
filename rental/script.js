@@ -1,18 +1,65 @@
 (() => {
-  const photos = [
-    ['bedrooms','Primary bedroom — wide view'],['bedrooms','Bedroom — front view 01'],['bedrooms','Bedroom — front view 02'],['bedrooms','Bedroom — front view 03'],['bedrooms','Bedroom — front view 04'],['bedrooms','Bedroom — front view 05'],['bedrooms','Bedroom — front view 06'],['bedrooms','Bedroom suite — room overview'],
-    ['living','TV lounge — view 01'],['living','TV lounge — view 02'],['living','TV lounge — view 03'],['details','Interior console and artwork'],
-    ['bedrooms','Second bedroom — view 01'],['bedrooms','Second bedroom — view 02'],['bedrooms','Second bedroom — dresser and workspace'],['bedrooms','Second bedroom — view 03'],['bedrooms','Second bedroom — view 04'],['details','Interior detail — view 02'],['details','Interior detail — view 03'],
-    ['bathrooms','Bathroom — vanity and shower'],['bathrooms','Bathroom — shower detail'],
-    ['exterior','Front approach — view 01'],['exterior','Front approach — view 02'],['exterior','Covered porch — view 01'],['exterior','Covered porch — view 02'],['exterior','Covered porch — view 03'],['exterior','Exterior angle — view 01'],['exterior','Exterior angle — view 02'],['exterior','House and landscaped yard'],['exterior','Centered front approach — view 01'],['exterior','Centered front approach — view 02']
-  ];
-  const path = index => `assets/photos/photo-${String(index + 1).padStart(2, '0')}.webp`;
+  const galleryTiles = [...document.querySelectorAll('.gallery-tile')];
+  const photos = galleryTiles.map(tile => [tile.dataset.group, tile.dataset.caption, tile.querySelector('img').dataset.full]);
+  const path = index => photos[index][2];
   let current = 0;
   const stageImage = document.querySelector('#stage-image');
   const stageCount = document.querySelector('#stage-count');
   const stageCaption = document.querySelector('#stage-caption');
-  const galleryTiles = [...document.querySelectorAll('.gallery-tile')];
   const lightbox = document.querySelector('.lightbox');
+
+  const heroSlides = [
+    {src:'assets/hero/kitchen.webp', alt:'Warm farmhouse kitchen with a large butcher-block island', number:'01 / 03', label:'THE KITCHEN'},
+    {src:'assets/hero/lake-view.webp', alt:'Shuswap Lake, beach and mountain view', number:'02 / 03', label:'SHUSWAP LAKE'},
+    {src:'assets/hero/living-room-crop.webp', alt:'Warm furnished living room seating', number:'03 / 03', label:'LIVING ROOM'}
+  ];
+  const heroMain = document.querySelector('[data-hero-main]');
+  const heroMainImage = heroMain?.querySelector(':scope > img');
+  const heroCounter = document.querySelector('[data-hero-counter]');
+  const heroProgress = [...document.querySelectorAll('[data-hero-slide]')];
+  const heroTiles = [...document.querySelectorAll('[data-hero-tile]')];
+  let heroCurrent = 0;
+  let heroTimer;
+
+  function syncHeroTiles() {
+    const others = heroSlides.map((_, i) => i).filter(i => i !== heroCurrent);
+    heroTiles.forEach((button, position) => {
+      const index = others[position];
+      const slide = heroSlides[index];
+      button.dataset.heroTile = String(index);
+      const image = button.querySelector(':scope > img');
+      image.src = slide.src;
+      image.alt = slide.alt;
+      const label = button.querySelector(':scope > span:not(.tile-copy)');
+      if (label) label.textContent = slide.label;
+      const counter = button.querySelector(':scope > b');
+      if (counter) counter.textContent = slide.number;
+    });
+  }
+
+  function showHero(index, restart = true) {
+    if (!heroMainImage) return;
+    heroCurrent = (index + heroSlides.length) % heroSlides.length;
+    const slide = heroSlides[heroCurrent];
+    heroMain.classList.add('is-changing');
+    const preload = new Image();
+    preload.onload = () => {
+      heroMainImage.src = preload.src;
+      heroMainImage.alt = slide.alt;
+      heroCounter.textContent = slide.number;
+      heroProgress.forEach((button, i) => button.classList.toggle('active', i === heroCurrent));
+      syncHeroTiles();
+      requestAnimationFrame(() => heroMain.classList.remove('is-changing'));
+    };
+    preload.src = slide.src;
+    if (restart && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      clearInterval(heroTimer);
+      heroTimer = setInterval(() => showHero(heroCurrent + 1, false), 7500);
+    }
+  }
+  heroProgress.forEach(button => button.addEventListener('click', () => showHero(Number(button.dataset.heroSlide))));
+  heroTiles.forEach(button => button.addEventListener('click', () => showHero(Number(button.dataset.heroTile))));
+  if (heroMainImage && !matchMedia('(prefers-reduced-motion: reduce)').matches) heroTimer = setInterval(() => showHero(heroCurrent + 1, false), 7500);
 
   function showPhoto(index, scroll = false) {
     current = (index + photos.length) % photos.length;
@@ -24,7 +71,7 @@
       stageImage.style.opacity = '1';
     };
     preload.src = path(current);
-    stageCount.textContent = `${String(current + 1).padStart(2, '0')} / 31`;
+    stageCount.textContent = `${String(current + 1).padStart(3, '0')} / ${photos.length}`;
     stageCaption.textContent = photos[current][1];
     galleryTiles.forEach((tile, i) => tile.setAttribute('aria-current', i === current ? 'true' : 'false'));
     if (scroll) document.querySelector('.gallery-stage').scrollIntoView({behavior:'smooth', block:'center'});
@@ -46,7 +93,7 @@
     const image = lightbox.querySelector('img');
     image.src = path(current);
     image.alt = photos[current][1];
-    lightbox.querySelector('figcaption span').textContent = `${String(current + 1).padStart(2, '0')} / 31`;
+    lightbox.querySelector('figcaption span').textContent = `${String(current + 1).padStart(3, '0')} / ${photos.length}`;
     lightbox.querySelector('figcaption b').textContent = photos[current][1];
     lightbox.showModal();
   }
@@ -55,7 +102,7 @@
     const image = lightbox.querySelector('img');
     image.src = path(current);
     image.alt = photos[current][1];
-    lightbox.querySelector('figcaption span').textContent = `${String(current + 1).padStart(2, '0')} / 31`;
+    lightbox.querySelector('figcaption span').textContent = `${String(current + 1).padStart(3, '0')} / ${photos.length}`;
     lightbox.querySelector('figcaption b').textContent = photos[current][1];
   }
   document.querySelector('#open-lightbox').addEventListener('click', openLightbox);
@@ -65,9 +112,9 @@
   lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
 
   const levels = {
-    1:{image:'assets/floor-plan/floor-1.webp',name:'Floor 1 · 1,067 finished sq. ft.',spaces:'Bedrooms · living room · office · foyer · two baths · patio · balcony'},
-    2:{image:'assets/floor-plan/floor-2.webp',name:'Floor 2 · 1,183 finished sq. ft.',spaces:'Primary bedroom · kitchen · dining room · laundry · garage · deck'},
-    3:{image:'assets/floor-plan/floor-3.webp',name:'Floor 3 · 545 finished sq. ft.',spaces:'Recreation room · bedroom · bath · storage · electrical room'}
+    1:{image:'assets/floor-plan/floor-1.webp',name:'Floor 1 · 1,067 finished sq. ft.',spaces:'Shiplap pull-out room · bedroom by mechanical · rear office/futon room · bath · patio'},
+    2:{image:'assets/floor-plan/floor-2.webp',name:'Floor 2 · 1,183 finished sq. ft.',spaces:'Primary/master bedroom · living room · kitchen · dining room · 1.5 baths · laundry · garage · deck'},
+    3:{image:'assets/floor-plan/floor-3.webp',name:'Floor 3 · 545 finished sq. ft.',spaces:'Two double-bunk bedrooms · plan-labeled office · bath · balcony'}
   };
   const levelImage = document.querySelector('#level-image');
   document.querySelectorAll('[data-level]').forEach(button => button.addEventListener('click', () => {
@@ -165,20 +212,12 @@
       'I confirmed that I am seeking quiet residential use and not a restricted property use.'
     ].join('\n');
   }
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', async event => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const body = inquiryBody();
-    const mailto=`mailto:brandon@thedrewlos.com?subject=${encodeURIComponent('Blake Point House — expression of interest')}&body=${encodeURIComponent(body)}`;
-    form.querySelector('.form-status').textContent='Your email app should open with the inquiry prepared. Nothing was stored on this site.';
-    window.location.href=mailto;
-  });
-  form.querySelector('.copy-inquiry').addEventListener('click', async () => {
     if (!form.reportValidity()) return;
     const text = inquiryBody();
     try {
       await navigator.clipboard.writeText(text);
-      form.querySelector('.form-status').textContent='Inquiry copied. Paste it into an email to brandon@thedrewlos.com.';
     } catch (error) {
       const area=document.createElement('textarea');
       area.value=text;
@@ -189,8 +228,8 @@
       area.select();
       document.execCommand('copy');
       area.remove();
-      form.querySelector('.form-status').textContent='Inquiry copied. Paste it into an email to brandon@thedrewlos.com.';
     }
+    form.querySelector('.form-status').textContent='Inquiry copied. Send it to the owner using the private contact channel where you received this preview.';
   });
 
   document.addEventListener('keydown', event => {

@@ -10,8 +10,8 @@
 
   const heroSlides = [
     {src:'assets/photos-v2/photo-065.webp', alt:'Front of Blake Point House with two hanging porch chairs', number:'01 / 03', label:'FRONT PORCH'},
-    {src:'assets/hero/lake-view.webp', alt:'Shuswap Lake, beach and mountain view', number:'02 / 03', label:'SHUSWAP LAKE'},
-    {src:'assets/hero/kitchen.webp', alt:'Warm farmhouse kitchen with a large butcher-block island', number:'03 / 03', label:'KITCHEN'}
+    {src:'assets/hero/living-room-angle.webp', alt:'Angled view across the living room toward the fireplace and built-ins', number:'02 / 03', label:'LIVING ROOM'},
+    {src:'assets/hero/lake-view.webp', alt:'Shuswap Lake, beach and mountain view', number:'03 / 03', label:'SHUSWAP LAKE'}
   ];
   const heroMain = document.querySelector('[data-hero-main]');
   const heroMainImage = heroMain?.querySelector(':scope > img');

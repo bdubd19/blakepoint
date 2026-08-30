@@ -44,6 +44,8 @@ function initSeasonField(THREE) {
   const frost = new THREE.Color('#789ca2');
   const spring = new THREE.Color('#5f9585');
   const ember = new THREE.Color('#e85838');
+  const seasonalColor = new THREE.Color();
+  const lineColor = new THREE.Color();
   const lineMaterial = new THREE.LineBasicMaterial({ color: lake, transparent: true, opacity: 0.16 });
   const lineGeometries = [];
 
@@ -119,10 +121,10 @@ function initSeasonField(THREE) {
     resize();
 
     const progress = seasonProgress();
-    const seasonalColor = progress < 0.5
-      ? ember.clone().lerp(frost, progress * 2)
-      : frost.clone().lerp(spring, (progress - 0.5) * 2);
-    lineMaterial.color.copy(lake.clone().lerp(seasonalColor, 0.34));
+    if (progress < 0.5) seasonalColor.lerpColors(ember, frost, progress * 2);
+    else seasonalColor.lerpColors(frost, spring, (progress - 0.5) * 2);
+    lineColor.lerpColors(lake, seasonalColor, 0.34);
+    lineMaterial.color.copy(lineColor);
     particleMaterial.color.copy(seasonalColor);
 
     lineGeometries.forEach(geometry => {

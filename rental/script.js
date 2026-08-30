@@ -9,9 +9,9 @@
   const lightbox = document.querySelector('.lightbox');
 
   const heroSlides = [
-    {src:'assets/hero/kitchen.webp', alt:'Warm farmhouse kitchen with a large butcher-block island', number:'01 / 03', label:'THE KITCHEN'},
+    {src:'assets/photos-v2/photo-065.webp', alt:'Front of Blake Point House with two hanging porch chairs', number:'01 / 03', label:'FRONT PORCH'},
     {src:'assets/hero/lake-view.webp', alt:'Shuswap Lake, beach and mountain view', number:'02 / 03', label:'SHUSWAP LAKE'},
-    {src:'assets/hero/living-room-crop.webp', alt:'Warm furnished living room seating', number:'03 / 03', label:'LIVING ROOM'}
+    {src:'assets/hero/kitchen.webp', alt:'Warm farmhouse kitchen with a large butcher-block island', number:'03 / 03', label:'KITCHEN'}
   ];
   const heroMain = document.querySelector('[data-hero-main]');
   const heroMainImage = heroMain?.querySelector(':scope > img');

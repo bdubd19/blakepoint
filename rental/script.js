@@ -112,8 +112,8 @@
   lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
 
   const levels = {
-    1:{image:'assets/floor-plan/floor-1.webp',name:'Floor 1 · 1,067 finished sq. ft.',spaces:'Bedroom with pull-out sofa · bedroom by mechanical · rear office/futon room · bath · patio'},
-    2:{image:'assets/floor-plan/floor-2.webp',name:'Floor 2 · 1,183 finished sq. ft.',spaces:'Primary/master bedroom · living room · kitchen · dining room · 1.5 baths · laundry · garage · deck'},
+    1:{image:'assets/floor-plan/floor-1.webp',name:'Floor 1 · 1,067 finished sq. ft.',spaces:'Bedroom with pull-out sofa · bedroom by mechanical · rear office/futon room · locked owner storage · bath · patio'},
+    2:{image:'assets/floor-plan/floor-2.webp',name:'Floor 2 · 1,183 finished sq. ft.',spaces:'Primary bedroom · living room · kitchen · dining room · 1.5 baths · laundry · locked garage · deck'},
     3:{image:'assets/floor-plan/floor-3.webp',name:'Floor 3 · 545 finished sq. ft.',spaces:'Two double-bunk bedrooms · plan-labeled office · bath · balcony'}
   };
   const levelImage = document.querySelector('#level-image');

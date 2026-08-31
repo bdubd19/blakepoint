@@ -32,6 +32,7 @@ Visitors will evaluate the home on desktop and mobile. The public page lives at 
 - Do not publish multiple near-identical exposures. Keep a second image only when the angle, room information, or decision value is materially different.
 - Preserve truthful property facts: four MLS bedrooms plus two furnished flex/sleeping rooms, four bathrooms, approximately 2,795 finished square feet, furnished, internet included, and hydro/propane extra, subject to final confirmation.
 - The garage and one designated storage room remain locked with owner belongings and are excluded from the tenancy; market driveway parking only and never imply garage or owner-storage access.
+- Pets are not permitted; state this clearly before application and do not market in pet-friendly channels.
 - Preserve the untouched original Matterport PDF as a separate download. The public furnished plan labels the basement shiplap room as Bedroom; it has a pull-out sofa and TV. Both upstairs bedrooms have double bunk beds; the bedroom beside mechanical has a bed; the rear basement room is an office with a desk and futon; the primary bedroom is on Floor 2.
 - Do not promise a boat slip, dock berth, unrestricted amenity access, or unconfirmed utilities, dates, occupancy, pet terms, or community privileges.
 - Treat $3,000–$3,200 per month as the current working rental range. Blind Bay is not a primary pricing benchmark because it is materially more accessible to Salmon Arm and less remote than Magna Bay.
